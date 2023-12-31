@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+</body>
+
+<script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() *10 + 1)
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "New DOM"
+    const addText = document.createTextNode("New DOM")
+    div.appendChild(addText)
+</script>    
+</body>
+</html>
