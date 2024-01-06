@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <button id ='green'> Green </button>
+    <button id = 'orange'> Orange </button>
+
+</body>
+
+<script>
+    // function makeFunc(){
+    //     let name = 'Ahmad'
+    //     function inner(){
+    //         console.log(name);
+    //     }
+    //     return inner;
+    // }
+
+    // const ahmad = new makeFunc();
+    // ahmad();
+</script>
+
+<script>
+    function clickHandler(color){
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('green').onclick = clickHandler('green')
+    document.getElementById('orange').onclick = clickHandler('orange')
+</script>
+
+</html>
